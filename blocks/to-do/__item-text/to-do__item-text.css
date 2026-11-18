@@ -1,0 +1,4 @@
+.to-do__item-text { display: block; overflow-wrap: anywhere; width: 100%; font-size: 15px; font-weight: 900; line-height: 1.35; color: #293d30; }
+.to-do__item_done .to-do__item-text { color: #9ba99c; text-decoration: line-through; text-decoration-thickness: 1px; }
+.to-do__item-text[contenteditable="true"] { padding: 4px 5px; margin: -4px -5px; border-radius: 4px; background: #fff; outline: 2px solid #96c876; text-decoration: none; }
+@media (max-width: 520px) { .to-do__item-text { font-size: 13px; } }

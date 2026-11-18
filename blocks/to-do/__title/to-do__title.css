@@ -1,0 +1,4 @@
+.to-do__title { margin: 0; max-width: 580px; font-size: clamp(40px, 5.7vw, 61px); font-weight: 900; line-height: 1.07; letter-spacing: -.07em; color: #233d2e; }
+.to-do__title span { display: inline-block; position: relative; z-index: 0; }
+.to-do__title span::after { content: ''; position: absolute; z-index: -1; left: -3px; right: -5px; bottom: 2px; height: 16px; background: #b6db92; transform: rotate(-1deg); border-radius: 2px; }
+@media (max-width: 620px) { .to-do__title { font-size: clamp(36px, 9vw, 47px); } }

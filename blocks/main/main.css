@@ -1,0 +1,8 @@
+.main {
+  flex: 1;
+  padding: 38px 24px 70px;
+}
+
+@media (max-width: 620px) {
+  .main { padding: 20px 14px 42px; }
+}

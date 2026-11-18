@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f7f2" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Точка — мой список дел</title>
+  </head>
+  <body class="body">
+    <main class="main">
+      <section class="to-do" aria-labelledby="to-do-title">
+        <header class="to-do__header">
+          <div class="to-do__brand">
+            <span class="to-do__brand-symbol" aria-hidden="true">✓</span>
+            <span>ТОЧКА<span class="to-do__brand-period">.</span></span>
+          </div>
+          <span class="to-do__header-caption">ПРОСТРАНСТВО ДЛЯ ПЛАНОВ</span>
+        </header>
+
+        <div class="to-do__hero">
+          <div class="to-do__hero-content">
+            <p class="to-do__eyebrow">УПРАВЛЯЙ СВОИМ ДНЁМ</p>
+            <h1 class="to-do__title" id="to-do-title">От планов —<br />к <span>результату.</span></h1>
+            <p class="to-do__subtitle">Собери мысли в одном месте, двигайся шаг за шагом и отмечай сделанное.</p>
+          </div>
+          <div class="to-do__summary" aria-label="Прогресс по задачам">
+            <span class="to-do__summary-label">СЕГОДНЯ В ФОКУСЕ</span>
+            <div class="to-do__summary-number"><span id="remaining-count">0</span><span class="to-do__summary-unit">задач<br />осталось</span></div>
+            <div class="to-do__progress"><span id="progress-fill" class="to-do__progress-fill"></span></div>
+            <p class="to-do__progress-caption"><span id="completed-count">0</span> из <span id="total-count">0</span> выполнено</p>
+          </div>
+        </div>
+
+        <div class="to-do__workspace">
+          <div class="to-do__workspace-header">
+            <div>
+              <p class="to-do__eyebrow to-do__eyebrow_workspace">ТВОЙ ЧЕК-ЛИСТ</p>
+              <h2 class="to-do__workspace-title">Список дел <span class="to-do__badge" id="task-badge">0</span></h2>
+            </div>
+            <span class="to-do__save-hint"><span aria-hidden="true">●</span> Сохраняется автоматически</span>
+          </div>
+
+          <form class="to-do__form" autocomplete="off">
+            <label class="to-do__form-label" for="task-input">НОВАЯ ЗАДАЧА</label>
+            <div class="to-do__form-fields">
+              <input class="to-do__input" id="task-input" name="task" type="text" maxlength="160" placeholder="Например, доделать учебный проект" required />
+              <button class="to-do__submit" type="submit"><span aria-hidden="true">+</span> Добавить</button>
+            </div>
+          </form>
+
+          <div class="to-do__toolbar">
+            <div class="to-do__filters" role="group" aria-label="Показать задачи">
+              <button type="button" class="to-do__filter to-do__filter_active" data-filter="all" aria-pressed="true">Все <span id="filter-all-count">0</span></button>
+              <button type="button" class="to-do__filter" data-filter="active" aria-pressed="false">В работе</button>
+              <button type="button" class="to-do__filter" data-filter="completed" aria-pressed="false">Готово</button>
+            </div>
+            <button class="to-do__clear" type="button">Убрать выполненные</button>
+          </div>
+
+          <ul class="to-do__list" aria-label="Задачи"></ul>
+          <p class="to-do__empty" hidden>Здесь пока нет задач. Добавь первую — и начни с малого.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>ТОЧКА<span class="footer__period">.</span> / ТВОЙ ТЕМП — ТВОИ ПРАВИЛА</span>
+      <span>Учебный проект на HTML, CSS и JavaScript</span>
+    </footer>
+
+    <template id="to-do__item-template">
+      <li class="to-do__item">
+        <button class="to-do__check" type="button" aria-label="Отметить как выполненную" aria-pressed="false"><span aria-hidden="true">✓</span></button>
+        <div class="to-do__item-content">
+          <span class="to-do__item-text"></span>
+          <span class="to-do__item-note">В работе</span>
+        </div>
+        <div class="to-do__item-actions">
+          <button class="to-do__item-button to-do__item-button_type_edit" type="button" aria-label="Редактировать задачу" title="Редактировать"></button>
+          <button class="to-do__item-button to-do__item-button_type_duplicate" type="button" aria-label="Копировать задачу" title="Копировать"></button>
+          <button class="to-do__item-button to-do__item-button_type_delete" type="button" aria-label="Удалить задачу" title="Удалить"></button>
+        </div>
+      </li>
+    </template>
+
+    <script src="./index.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  max-width: 1052px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 26px 34px;
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: .055em;
+  color: #7e8a81;
+}
+.footer__period { color: #80a83f; }
+@media (max-width: 620px) {
+  .footer { flex-direction: column; padding: 0 16px 24px; gap: 6px; }
+}

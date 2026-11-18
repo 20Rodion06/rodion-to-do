@@ -1,0 +1,6 @@
+.to-do__item-button { position: relative; flex: 0 0 34px; width: 34px; height: 34px; padding: 0; border: 1px solid transparent; border-radius: 9px; background: transparent; cursor: pointer; transition: background 160ms, border-color 160ms; }
+.to-do__item-button::before { content: ''; position: absolute; inset: 0; background-position: center; background-size: 17px; background-repeat: no-repeat; filter: brightness(0) saturate(100%); opacity: .53; }
+.to-do__item-button:hover { background: #e9f1e4; border-color: #d4e4cd; }
+.to-do__item-button:hover::before { opacity: .95; }
+.to-do__item-button_type_delete:hover { background: #fae9e5; border-color: #f1cec6; }
+@media (max-width: 520px) { .to-do__item-button { flex-basis: 29px; width: 29px; height: 29px; } .to-do__item-button::before { background-size: 15px; } }

@@ -1,0 +1,4 @@
+.to-do__submit { min-height: 55px; min-width: 154px; padding: 12px 21px; border: 0; border-radius: 11px; background: #253c30; color: #fff; font-size: 14px; font-weight: 900; cursor: pointer; transition: background 160ms, transform 160ms; }
+.to-do__submit span { display: inline-block; margin-right: 7px; color: #d4f898; font-size: 23px; line-height: 0; vertical-align: -1px; font-weight: 300; }
+.to-do__submit:hover { background: #3d6345; transform: translateY(-1px); }
+@media (max-width: 520px) { .to-do__submit { width: 100%; } }
